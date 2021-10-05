@@ -131,6 +131,7 @@ jobs:
           git-message: 'chore(release): {version}'
           version-file: 'version.json'
           output-file: 'CHANGELOG.md'
+          skip-on-empty: 'false'
         env:
           ENV: 'dont-use-git'
 
