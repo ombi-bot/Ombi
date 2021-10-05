@@ -1,3 +1,12 @@
+## [4.2.2](https://github.com/ombi-bot/Ombi/compare/v4.2.1...v4.2.2) (2021-10-05)
+
+
+### Bug Fixes
+
+* :bug: updated PAT ([7c48196](https://github.com/ombi-bot/Ombi/commit/7c481962493d3349b9b720c08fee3f94206a8f10))
+
+
+
 ## [4.2.1](https://github.com/ombi-bot/Ombi/compare/v4.2.0...v4.2.1) (2021-10-05)
 
 
@@ -40,10 +49,6 @@
 * :fire: fixed the outputs ([a518fb8](https://github.com/ombi-bot/Ombi/commit/a518fb85ad922545d4653a3c67bb8101c1e97cb0))
 * :fire: removed old changelog ([d9a5e66](https://github.com/ombi-bot/Ombi/commit/d9a5e66be2b136ba4c42d76cb9d03e7502041561))
 * try and fix the artifact upload ([fb9ff4c](https://github.com/ombi-bot/Ombi/commit/fb9ff4ccde9121dce6da379198de225686123457))
-
-
-
-## [4.1.9](https://github.com/ombi-bot/Ombi/compare/v4.1.8...v4.1.9) (2021-09-29)
 
 
 
