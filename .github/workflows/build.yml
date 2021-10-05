@@ -58,6 +58,7 @@ jobs:
      outputs:
       changelog: ${{ steps.changelog.outputs.clean_changelog }}
       tag: ${{ steps.changelog.outputs.tag }}
+      version: ${{ steps.changelog.outputs.version }}
      steps:
        - uses: actions/checkout@v2
        # This is only to get the next version number so we can set the version before compile
@@ -190,6 +191,15 @@ jobs:
             artifacts/**/*.tar.gz
             artifacts/**/*.zip
 
+  update-changelog:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+       - name: Conventional Changelog Action
+         id: changelog
+         uses: TriPSs/conventional-changelog-action@v3
+         with:
+           version-file: 'version.json'
 
 
     #  - name: Trigger APT Build
