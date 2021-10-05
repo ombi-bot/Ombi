@@ -1,4 +1,4 @@
-## [0.1.1](https://github.com/ombi-bot/Ombi/compare/v4.1.9...v0.1.1) (2021-10-05)
+## [4.0.1517](https://github.com/ombi-bot/Ombi/compare/v4.1.9...v4.0.1517) (2021-10-05)
 
 
 ### Bug Fixes
@@ -8,6 +8,7 @@
 * :bug: added new workflow pat ([4c7090e](https://github.com/ombi-bot/Ombi/commit/4c7090e902342bfd7e3f54bfa130a45af3f64c96))
 * :bug: bump ver ([5207b21](https://github.com/ombi-bot/Ombi/commit/5207b21f2f98cc63f16a72bd79ecac6abf838139))
 * :bug: fixed the workflow issue ([2df8e72](https://github.com/ombi-bot/Ombi/commit/2df8e72962f93e5ba8e1b9ccebfe647c0ccde758))
+* :bug: pass the PAT into the checkout action ([9872ba1](https://github.com/ombi-bot/Ombi/commit/9872ba1fdb18603ece60bb5100a929d5cab7f47f))
 * :bug: Set the real tag version now ([9287d83](https://github.com/ombi-bot/Ombi/commit/9287d83c134e62c9f0a5d271cfd88eefc9dcae39))
 * :bug: Stop Devops from building and releasing, GH Actions will now call the APT Build ([1fda2a1](https://github.com/ombi-bot/Ombi/commit/1fda2a1d37c1182177fdca55e38b98a85dc1fe05))
 * :bug: try again ([546d19c](https://github.com/ombi-bot/Ombi/commit/546d19cd04fefff5a992d929efad5c0f7fa3f8bd))
