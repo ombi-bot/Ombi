@@ -2,8 +2,7 @@ name: CI Build
 
 on:
   push:
-    # branches: [ develop, feature/** ]
-    branches: [ releaseNotes ]
+    branches: [ develop, releaseNotes, feature/** ]
 
 jobs:
   build-ui:
@@ -32,8 +31,6 @@ jobs:
           name: angular_dist
           path: |
             ./src/Ombi/ClientApp/dist
-            
-  
 
   unit-test:
     runs-on: ubuntu-latest
