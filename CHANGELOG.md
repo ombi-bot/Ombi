@@ -1,4 +1,4 @@
-# [4.1.0](https://github.com/ombi-bot/Ombi/compare/v4.0.1517...v4.1.0) (2021-10-05)
+# [4.2.0](https://github.com/ombi-bot/Ombi/compare/v4.0.1517...v4.2.0) (2021-10-05)
 
 
 ### Bug Fixes
@@ -9,6 +9,7 @@
 ### Features
 
 * :sparkles: remove old changelog ([afc47d4](https://github.com/ombi-bot/Ombi/commit/afc47d49cada4f895bb5d85cb02d7f6ef559b8e3))
+* :sparkles: Use the WORKFLOW PAT ([dbc3235](https://github.com/ombi-bot/Ombi/commit/dbc3235e9d3e9d5d3f70ea14cf75fff5cd8a6044))
 
 
 
