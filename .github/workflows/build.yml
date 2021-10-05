@@ -63,7 +63,7 @@ jobs:
        # This is only to get the next version number so we can set the version before compile
        - name: Conventional Changelog Action
          id: changelog
-         uses: TriPSs/conventional-changelog-action@v3.9.1
+         uses: TriPSs/conventional-changelog-action@v3
          with:
            skip-version-file: 'true'
            skip-commit: 'true'
