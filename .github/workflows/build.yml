@@ -132,6 +132,8 @@ jobs:
           git-message: 'chore(release): {version}'
           version-file: 'version.json'
           output-file: 'CHANGELOG.md'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set Backend Version
         run: |
