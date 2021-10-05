@@ -114,6 +114,8 @@ jobs:
             format: tar.gz
     steps:
       - uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.WORKFLOW_PAT }}
 
       - name: Nuget Cache
         uses: actions/cache@v2
@@ -124,23 +126,14 @@ jobs:
             ${{ runner.os }}-nuget
 
       # This is only to get the next version number so we can set the version before compile
-      #- name: Conventional Changelog Action
-      #  id: changelog
-      #  uses: TriPSs/conventional-changelog-action@v3
-      #  with:
-      #    github-token: ${{ secrets.WORKFLOW_PAT }}
-      #    git-message: 'chore(release): {version}'
-      #    version-file: 'version.json'
-      #    output-file: 'CHANGELOG.md'
-      #  env:
-      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Bump version
+      - name: Conventional Changelog Action
         id: changelog
-        uses: remorses/bump-version@js
+        uses: TriPSs/conventional-changelog-action@v3
         with:
-          version_file: ./VERSION
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.WORKFLOW_PAT }}
+          git-message: 'chore(release): {version}'
+          version-file: 'version.json'
+          output-file: 'CHANGELOG.md'
 
       - name: Set Backend Version
         run: |
