@@ -32,6 +32,8 @@ jobs:
           name: angular_dist
           path: |
             ./src/Ombi/ClientApp/dist
+            
+  
 
   unit-test:
     runs-on: ubuntu-latest
@@ -63,34 +65,34 @@ jobs:
       #   # Use always() to always run this step to publish test results when there are test failures
       #   if: ${{ always() }}
 
-  # versioning:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     # This is only to get the next version number so we can set the version before compile
-  #     - name: Conventional Changelog Action
-  #       id: changelog
-  #       uses: TriPSs/conventional-changelog-action@v3
-  #       with:
-  #         github-token: ${{ secrets.github_token }}
-  #         skip-version-file: 'true'
-  #         skip-commit: 'true'
-  #         version-file: 'version.json'
-  #         output-file: 'false'
-  #         skip-on-empty: 'false'
+  versioning:
+     runs-on: ubuntu-latest
+     outputs:
+      changelog: ${{ steps.changelog.outputs.clean_changelog }}
+      tag: ${{ steps.changelog.outputs.tag }}
+     steps:
+       - uses: actions/checkout@v2
+       # This is only to get the next version number so we can set the version before compile
+       - name: Conventional Changelog Action
+         id: changelog
+         uses: TriPSs/conventional-changelog-action@v3
+         with:
+           skip-version-file: 'true'
+           skip-commit: 'true'
+           version-file: 'version.json'
+           output-file: 'false'
+           skip-on-empty: 'false'
+           git-push: 'false'
 
-  #     - name: Output version
-  #       run: |
-  #         echo "outputs: ${{ steps.changelog.outputs.tag }}"
-  #         echo "Version: ${{ steps.changelog.outputs.version }}"
-  #         echo "log: ${{ steps.changelog.outputs.clean_changelog }}"
+       - name: Output version
+         run: |
+           echo "outputs: ${{ steps.changelog.outputs.tag }}"
+           echo "Version: ${{ steps.changelog.outputs.version }}"
+           echo "log: ${{ steps.changelog.outputs.clean_changelog }}"
 
   publish:
     runs-on: ubuntu-latest
-    outputs:
-      changelog: ${{ steps.changelog.outputs.clean_changelog }}
-      tag: ${{ steps.changelog.outputs.tag }}
-    needs: [ build-ui ]
+    needs: [ build-ui, versioning ]
     strategy:
       matrix:
         include:
@@ -123,19 +125,22 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nuget
 
-      - name: Conventional Changelog Action
-        id: changelog
-        uses: TriPSs/conventional-changelog-action@v3.7.1
-        with:
-          github-token: ${{ secrets.WORKFLOW_PAT }}
-          git-message: 'chore(release): {version}'
-          version-file: 'version.json'
-          output-file: 'CHANGELOG.md'
+     # - name: Conventional Changelog Action
+       # id: changelog
+      #  uses: TriPSs/conventional-changelog-action@v3.7.1
+     #   with:
+      #    github-token: ${{ secrets.WORKFLOW_PAT }}
+         # git-message: 'chore(release): {version}'
+      #    version-file: 'version.json'
+        #  output-file: 'CHANGELOG.md'
+       #   skip-on-empty: 'false'
+        #env:
+       #   ENV: 'dont-use-git'
 
       - name: Set Backend Version
         run: |
           dotnet tool install -g dotnet-setversion
-          setversion -r ${{ steps.changelog.outputs.version }}
+          setversion -r ${{ needs.versioning.outputs.version }}
         working-directory: src
 
       - name: Publish Backend ${{ matrix.os }}
@@ -176,7 +181,7 @@ jobs:
             ./src/Ombi/${{ matrix.os }}.${{ matrix.format }}
 
   release:
-    needs: [ publish, unit-test ]
+    needs: [ publish, unit-test, versioning ]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -190,9 +195,9 @@ jobs:
         uses: softprops/action-gh-release@v1
         if: startsWith(github.ref, 'refs/tags/')
         with:
-          body: ${{ needs.publish.outputs.changelog }}
-          name: ${{ needs.publish.outputs.tag }}
-          tag_name: ${{ needs.publish.outputs.tag }}
+          body: ${{ needs.versioning.outputs.changelog }}
+          name: ${{ needs.versioning.outputs.tag }}
+          tag_name: ${{ needs.versioning.outputs.tag }}
           files: |
             artifacts/**/*.tar.gz
             artifacts/**/*.zip
