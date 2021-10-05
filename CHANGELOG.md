@@ -1,3 +1,12 @@
+# [4.4.0](https://github.com/ombi-bot/Ombi/compare/v4.3.0...v4.4.0) (2021-10-05)
+
+
+### Features
+
+* :sparkles: aaaaa ([17c571a](https://github.com/ombi-bot/Ombi/commit/17c571ac14a8087912e2843806e8c03c2969da81))
+
+
+
 # [4.3.0](https://github.com/ombi-bot/Ombi/compare/v4.2.1...v4.3.0) (2021-10-05)
 
 
