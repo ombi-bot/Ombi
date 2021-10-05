@@ -1,9 +1,10 @@
-## [4.0.1515](https://github.com/ombi-bot/Ombi/compare/v4.1.9...v4.0.1515) (2021-10-05)
+## [4.0.1516](https://github.com/ombi-bot/Ombi/compare/v4.1.9...v4.0.1516) (2021-10-05)
 
 
 ### Bug Fixes
 
 * :bookmark: Set version to correct number ([1a7b9b5](https://github.com/ombi-bot/Ombi/commit/1a7b9b50578675532fdb0f656cbaf51306166b84))
+* :bug: add the env var ([fbba782](https://github.com/ombi-bot/Ombi/commit/fbba78280a0a5ee94cdd1333b0f21429192e8fdc))
 * :bug: added new workflow pat ([4c7090e](https://github.com/ombi-bot/Ombi/commit/4c7090e902342bfd7e3f54bfa130a45af3f64c96))
 * :bug: bump ver ([5207b21](https://github.com/ombi-bot/Ombi/commit/5207b21f2f98cc63f16a72bd79ecac6abf838139))
 * :bug: fixed the workflow issue ([2df8e72](https://github.com/ombi-bot/Ombi/commit/2df8e72962f93e5ba8e1b9ccebfe647c0ccde758))
