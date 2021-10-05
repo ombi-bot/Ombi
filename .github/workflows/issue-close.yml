@@ -27,7 +27,7 @@ jobs:
         name: Create comment
         uses: peter-evans/create-or-update-comment@v1
         with:
-          issue-number: $ {{ github.event.issue.number }}
+          issue-number: ${{ github.event.issue.number }}
           body: |
             Hi!
             <br/>Thanks for the issue report. Before a real human comes by, please make sure you used our bug report format.
