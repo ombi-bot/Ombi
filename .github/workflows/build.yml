@@ -82,8 +82,7 @@ jobs:
            version-file: 'version.json'
            output-file: 'false'
            skip-on-empty: 'false'
-         env:
-          ENV: 'dont-use-git'
+           git-push: 'false'
 
        - name: Output version
          run: |
