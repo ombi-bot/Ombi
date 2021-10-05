@@ -53,15 +53,6 @@ jobs:
           cd src
           dotnet test --logger trx --results-directory "TestResults"
 
-      ## Don't need yet
-      # - name: Upload dotnet test results
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: dotnet-results
-      #     path: src/TestResults
-      #   # Use always() to always run this step to publish test results when there are test failures
-      #   if: ${{ always() }}
-
   versioning:
      runs-on: ubuntu-latest
      outputs:
@@ -72,7 +63,7 @@ jobs:
        # This is only to get the next version number so we can set the version before compile
        - name: Conventional Changelog Action
          id: changelog
-         uses: TriPSs/conventional-changelog-action@v3
+         uses: TriPSs/conventional-changelog-action@v3.9.1
          with:
            skip-version-file: 'true'
            skip-commit: 'true'
