@@ -124,16 +124,23 @@ jobs:
             ${{ runner.os }}-nuget
 
       # This is only to get the next version number so we can set the version before compile
-      - name: Conventional Changelog Action
+      #- name: Conventional Changelog Action
+      #  id: changelog
+      #  uses: TriPSs/conventional-changelog-action@v3
+      #  with:
+      #    github-token: ${{ secrets.WORKFLOW_PAT }}
+      #    git-message: 'chore(release): {version}'
+      #    version-file: 'version.json'
+      #    output-file: 'CHANGELOG.md'
+      #  env:
+      #    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Bump version
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3
+        uses: remorses/bump-version@js
         with:
-          github-token: ${{ secrets.WORKFLOW_PAT }}
-          git-message: 'chore(release): {version}'
-          version-file: 'version.json'
-          output-file: 'CHANGELOG.md'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          version_file: ./VERSION
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Set Backend Version
         run: |
