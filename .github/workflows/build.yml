@@ -192,14 +192,15 @@ jobs:
             artifacts/**/*.zip
 
   update-changelog:
-     runs-on: ubuntu-latest
-     steps:
-       - uses: actions/checkout@v2
-       - name: Conventional Changelog Action
-         id: changelog
-         uses: TriPSs/conventional-changelog-action@v3
-         with:
-           version-file: 'version.json'
+    needs: [ release ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Conventional Changelog Action
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v3
+        with:
+          version-file: 'version.json'
 
 
     #  - name: Trigger APT Build
