@@ -1,4 +1,4 @@
-## [4.0.1512](https://github.com/ombi-bot/Ombi/compare/v4.1.9...v4.0.1512) (2021-10-05)
+## [4.0.1513](https://github.com/ombi-bot/Ombi/compare/v4.1.9...v4.0.1513) (2021-10-05)
 
 
 ### Bug Fixes
