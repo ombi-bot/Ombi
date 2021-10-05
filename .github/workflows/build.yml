@@ -114,8 +114,6 @@ jobs:
             format: tar.gz
     steps:
       - uses: actions/checkout@v2
-        with:
-          token: ${{ secrets.WORKFLOW_PAT }}
 
       - name: Nuget Cache
         uses: actions/cache@v2
