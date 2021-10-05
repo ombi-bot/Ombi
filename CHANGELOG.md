@@ -1,9 +1,22 @@
-## [4.2.2](https://github.com/ombi-bot/Ombi/compare/v4.2.1...v4.2.2) (2021-10-05)
+# [4.3.0](https://github.com/ombi-bot/Ombi/compare/v4.2.1...v4.3.0) (2021-10-05)
 
 
 ### Bug Fixes
 
+* :bug: fixed ([3525554](https://github.com/ombi-bot/Ombi/commit/3525554f47cc4febafa43e8b0c756f6781dd6e92))
+* :bug: Fixed the syntax issue ([a2e6efb](https://github.com/ombi-bot/Ombi/commit/a2e6efbc0cc3ef4c9cffa8e8e5a851337182fc0d))
+* :bug: Give it a access token ([8d6c695](https://github.com/ombi-bot/Ombi/commit/8d6c6956767a59508fdcd99e02f9be2d3ba34506))
+* :bug: split out the versioning ([9a334b4](https://github.com/ombi-bot/Ombi/commit/9a334b4c5ebd54ab786cd62e46c2ec656003cab4))
+* :bug: syntax ([ed9824d](https://github.com/ombi-bot/Ombi/commit/ed9824d5412c9b3436e5816b94310cb539498bcd))
 * :bug: updated PAT ([7c48196](https://github.com/ombi-bot/Ombi/commit/7c481962493d3349b9b720c08fee3f94206a8f10))
+* :bug: use the github event ([3b5b964](https://github.com/ombi-bot/Ombi/commit/3b5b964b60c9e4c17149ab8a42378206a7a6e896))
+* :fire: pretend to fix an issue ([5c239b6](https://github.com/ombi-bot/Ombi/commit/5c239b6207b32e94083d3f1f41e5633442c7ceb9))
+
+
+### Features
+
+* :sparkles: Added a gh issue closer thing ([db370f5](https://github.com/ombi-bot/Ombi/commit/db370f50d0dde54b4b05347011eda6f0c76ebb68))
+* :sparkles: Added contributors ([d17c394](https://github.com/ombi-bot/Ombi/commit/d17c394165d73b534141d19b0760a783170201aa))
 
 
 
@@ -31,7 +44,7 @@
 
 
 
-## [4.0.1517](https://github.com/ombi-bot/Ombi/compare/v4.1.9...v4.0.1517) (2021-10-05)
+## [4.0.1517](https://github.com/ombi-bot/Ombi/compare/v4.0.1599...v4.0.1517) (2021-10-05)
 
 
 ### Bug Fixes
@@ -49,6 +62,39 @@
 * :fire: fixed the outputs ([a518fb8](https://github.com/ombi-bot/Ombi/commit/a518fb85ad922545d4653a3c67bb8101c1e97cb0))
 * :fire: removed old changelog ([d9a5e66](https://github.com/ombi-bot/Ombi/commit/d9a5e66be2b136ba4c42d76cb9d03e7502041561))
 * try and fix the artifact upload ([fb9ff4c](https://github.com/ombi-bot/Ombi/commit/fb9ff4ccde9121dce6da379198de225686123457))
+
+
+
+## [4.1.9](https://github.com/ombi-bot/Ombi/compare/v4.1.8...v4.1.9) (2021-09-29)
+
+
+
+## [4.1.7](https://github.com/ombi-bot/Ombi/compare/v4.1.6...v4.1.7) (2021-09-29)
+
+
+
+## [4.1.6](https://github.com/ombi-bot/Ombi/compare/v4.1.5...v4.1.6) (2021-09-29)
+
+
+
+## [4.1.5](https://github.com/ombi-bot/Ombi/compare/v4.1.4...v4.1.5) (2021-09-29)
+
+
+
+## [4.1.3](https://github.com/ombi-bot/Ombi/compare/v4.1.2...v4.1.3) (2021-09-29)
+
+
+
+## [4.1.2](https://github.com/ombi-bot/Ombi/compare/v4.1.1...v4.1.2) (2021-09-28)
+
+
+### Bug Fixes
+
+* :bug: Pretending to fix a bug ([5351c14](https://github.com/ombi-bot/Ombi/commit/5351c14cb087f9ecbb37b784724bb35107d17cb8))
+
+
+
+## [4.1.1](https://github.com/ombi-bot/Ombi/compare/v4.0.1506...v4.1.1) (2021-09-28)
 
 
 
