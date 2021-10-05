@@ -125,7 +125,7 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
         with:
-          github-token: ${{ secrets.github_token }}
+          github-token: ${{ secrets.WORKFLOW_PAT }}
           skip-version-file: 'true'
           skip-commit: 'true'
           version-file: 'version.json'
@@ -184,7 +184,7 @@ jobs:
         id: changelog
         uses: TriPSs/conventional-changelog-action@v3
         with:
-          github-token: ${{ secrets.github_token }}
+          github-token: ${{ secrets.WORKFLOW_PAT }}
           git-message: 'chore(release): {version}'
           version-file: 'version.json'
           output-file: 'CHANGELOG.md'
