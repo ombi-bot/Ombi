@@ -2,7 +2,7 @@ name: CI Build
 
 on:
   push:
-    branches: [ develop, releaseNotes, feature/** ]
+    branches: [ develop, master ]
 
 jobs:
   build-ui:
@@ -180,10 +180,22 @@ jobs:
         with:
           path: artifacts
 
-      - name: Publish to GitHub
+      - name: Publish to GitHub Master
         uses: softprops/action-gh-release@v1
-        if: startsWith(github.ref, 'refs/tags/')
+        if: contains(github.ref, 'master')
         with:
+          body: ${{ needs.versioning.outputs.changelog }}
+          name: ${{ needs.versioning.outputs.tag }}
+          tag_name: ${{ needs.versioning.outputs.tag }}
+          files: |
+            artifacts/**/*.tar.gz
+            artifacts/**/*.zip
+
+      - name: Publish to GitHub Develop
+        uses: softprops/action-gh-release@v1
+        if: contains(github.ref, 'develop')
+        with:
+          prerelease: true
           body: ${{ needs.versioning.outputs.changelog }}
           name: ${{ needs.versioning.outputs.tag }}
           tag_name: ${{ needs.versioning.outputs.tag }}
