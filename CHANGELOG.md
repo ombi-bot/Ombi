@@ -1,3 +1,12 @@
+## [4.2.1](https://github.com/ombi-bot/Ombi/compare/v4.2.0...v4.2.1) (2021-10-05)
+
+
+### Bug Fixes
+
+* :bug: use an older version of the action ([fdb4a9b](https://github.com/ombi-bot/Ombi/commit/fdb4a9bec7e8a4240b0cd231d101a454b14bcba7))
+
+
+
 # [4.2.0](https://github.com/ombi-bot/Ombi/compare/v4.0.1517...v4.2.0) (2021-10-05)
 
 
@@ -35,10 +44,6 @@
 
 
 ## [4.1.9](https://github.com/ombi-bot/Ombi/compare/v4.1.8...v4.1.9) (2021-09-29)
-
-
-
-## [4.1.7](https://github.com/ombi-bot/Ombi/compare/v4.1.6...v4.1.7) (2021-09-29)
 
 
 
