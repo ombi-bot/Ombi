@@ -131,6 +131,8 @@ jobs:
           git-message: 'chore(release): {version}'
           version-file: 'version.json'
           output-file: 'CHANGELOG.md'
+        env:
+          ENV: 'dont-use-git'
 
       - name: Set Backend Version
         run: |
