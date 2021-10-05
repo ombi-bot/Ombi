@@ -77,7 +77,6 @@ jobs:
          id: changelog
          uses: TriPSs/conventional-changelog-action@v3
          with:
-           github-token: ${{ secrets.github_token }}
            skip-version-file: 'true'
            skip-commit: 'true'
            version-file: 'version.json'
