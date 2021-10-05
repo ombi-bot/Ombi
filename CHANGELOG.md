@@ -1,9 +1,14 @@
-## [4.0.1519](https://github.com/ombi-bot/Ombi/compare/v4.0.1517...v4.0.1519) (2021-10-05)
+# [4.1.0](https://github.com/ombi-bot/Ombi/compare/v4.0.1517...v4.1.0) (2021-10-05)
 
 
 ### Bug Fixes
 
 * :bug: use the github default token ([6bb522c](https://github.com/ombi-bot/Ombi/commit/6bb522cf6b97a150bb3bc621b5478bac45253045))
+
+
+### Features
+
+* :sparkles: remove old changelog ([afc47d4](https://github.com/ombi-bot/Ombi/commit/afc47d49cada4f895bb5d85cb02d7f6ef559b8e3))
 
 
 
