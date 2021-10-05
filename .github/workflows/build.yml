@@ -69,7 +69,7 @@ jobs:
      runs-on: ubuntu-latest
      outputs:
       changelog: ${{ steps.changelog.outputs.clean_changelog }}
-      tag: ${{ steps.changelog.outputs.tag }
+      tag: ${{ steps.changelog.outputs.tag }}
      steps:
        - uses: actions/checkout@v2
        # This is only to get the next version number so we can set the version before compile
